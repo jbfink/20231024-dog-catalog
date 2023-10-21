@@ -60,8 +60,7 @@
 	McMaster University
 \end{frame}
 
-% LAND ACQ HERE: 
-% 
+
 
 
 \begin{frame}
@@ -74,11 +73,11 @@
  	\makebox[\linewidth]{\includegraphics[width=\paperwidth,height=\paperheight]{dontknow}}
  \end{frame}
 
-\begin{frame}{Important things I \textbf{don't} address}
+\begin{frame}{Important things I \textbf{don't} address (much)}
 	\begin{itemize}
 		\item Copyright
 		\pause
-		\item Pedagogical implications
+		\item Pedagogical implications, including academic integrity
 		\pause
 		\item Ethics
 	\end{itemize}
@@ -88,22 +87,11 @@
 	These are VERY IMPORTANT concepts.
 \end{frame}
 
+\begin{frame}{A note about techbros}
+% slide about bitcoin/NFT and commonalities between it and "AI" now
+% Crucial bit -- NFTs and Bitcoin are predicated upon *scarcity*, AI is not (not artificially, anyway)
 
-
-
-\begin{frame}
-	A little conversation about the weather.
 \end{frame}
-
-\begin{frame}[plain]
-	\makebox[\linewidth]{\includegraphics[width=\paperwidth,height=\paperheight]{barometer}}
-\end{frame}
-
-\begin{frame}[plain]
-	\makebox[\linewidth]{\includegraphics[width=\paperwidth,height=\paperheight]{eniac}}
-\end{frame}
-
-% Weather prediction is a lot like language prediction in LLMs. Before the advent of programmable computers, it involved looking at the sky a lot and looking at barometers a lot -- in the 1950s, the early computer ENIAC ran some of the first weather models. Nowadays, we have weather models that are extremely sophisticated and take a lot of computing power to run and can predict the weather many days out. They predict the weather by looking at *current conditions* and extrapolating what *usually happens* from those current predictions, and they're really pretty good at it because there's a lot of data about. This is *eerily similar* to how LLMs/ChatGPT works -- it's not "reasoning" per se, but *predicting* what comes next based on context and what has come previous, and since they have vast, vast amounts of example data -- like the weather models! -- they are pretty good at it. Good enough to fool us, anyway.
 
 \begin{frame}
 	Why I say "Large Language Model" and not "AI"
@@ -163,7 +151,29 @@
 	\makebox[\linewidth]{\includegraphics[width=\paperwidth,height=\paperheight]{llamas}}
 \end{frame}
 
-% February 24th, Facebook introduces LLaMa in a blog post but doesn't freely release how it's made, but it *does* let people have access to it via an application. Of course it was *instantly* leaked, and started an absolute torrent of derivatives. Nearly every locally-runnable model today is based somewhat on the LLaMa original code, which is problematic because it precludes commercial use. There are attempts -- going on RIGHT NOW -- to recreate LLaMa functionality with unencumbered data, and there are already models out there without encumbrances, so this is less of a factor going forward.
+
+
+% February 24th, Facebook introduces LLaMa in a blog post but doesn't freely release how it's made, but it *does* let people have access to it via an application. Of course it was *instantly* leaked, and started an absolute torrent of derivatives. Nearly every locally-runnable model today is based somewhat on the LLaMa original code, which is problematic because it precludes commercial use. There were attempts of to recreate the encumbered LLaMa-v1 in unencumbered models, but in xxx TODO: LOOK IT UP Meta released LLaMa v2, a series of "sort of" open source models upon which a whole  ecosystem is formed.
+
+\begin{frame}
+	The immediate, post-2017 frantic present is a weird syncretism between Google and OpenAI, and to a somewhat lesser extent, Meta/Facebook
+\end{frame} 
+
+
+\begin{frame}
+	A little conversation about the weather.
+\end{frame}
+
+\begin{frame}[plain]
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth,height=\paperheight]{barometer}}
+\end{frame}
+
+\begin{frame}[plain]
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth,height=\paperheight]{eniac}}
+\end{frame}
+
+% Weather prediction is a lot like language prediction in LLMs. Before the advent of programmable computers, it involved looking at the sky a lot and looking at barometers a lot -- in the 1950s, the early computer ENIAC ran some of the first weather models. Nowadays, we have weather models that are extremely sophisticated and take a lot of computing power to run and can predict the weather many days out. They predict the weather by looking at *current conditions* and extrapolating what *usually happens* from those current predictions, and they're really pretty good at it because there's a lot of data about. This is *eerily similar* to how LLMs/ChatGPT works -- it's not "reasoning" per se, but *predicting* what comes next based on context and what has come previous, and since they have vast, vast amounts of example data -- like the weather models! -- they are pretty good at it. Good enough to fool us, anyway.
+
 
 \begin{frame}
 	"Progress is now moving so swiftly that every few weeks the state-of-the-art is changing or models that previously required clusters to run now run on Raspberry PIs."
@@ -176,7 +186,6 @@
 \begin{frame}{Important concepts for GPT and other models}
 	\begin{itemize}
 		\item Context Window and Tokens
-		% 2k for LLaMa, 4k for GPT4 chat, 8k/32k via API. This is short term memory.
 		\pause
 		\item Few-Shot / No-Shot
 		\pause
@@ -205,6 +214,18 @@
 
 \begin{frame}[plain]
 	\makebox[\linewidth]{\includegraphics[width=\paperwidth,height=\paperheight]{leonard}}
+\end{frame}
+
+\begin{frame}{More about tokens and the context window}
+	\begin{itemize}
+		\item \textit{Tokens} and \textit{context windows} are one of the big limiting factors in nearly every present-day LLM
+		% Look up context window size: prior text is 2k for LLaMa, 4k for GPT4 chat, 8k/32k via API. This is short term memory.
+		\pause
+		\item But \textit{it seems like every day} there is a new paper detailing some new method to get millions of tokens in context
+		\pause
+		\item So who knows?
+	\end{itemize}
+	
 \end{frame}
 
 \begin{frame}{Few-Shot / No-Shot}
@@ -266,6 +287,9 @@
 	llama.cpp -- https://github.com/ggerganov/llama.cpp
 \end{frame}
 
+\begin{frame}{quantization of models}
+	% comparison of unquant and quant models here -- note size decreseases/system requirement decreases
+\end{frame}
 
 \begin{frame}{We Have No Moat}
 	In May 2023 a Google internal document was leaked to the public, titled "We Have No Moat, and Neither Does OpenAI". It's worth quoting some bits from it, because it's a doozy.
@@ -279,19 +303,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{THE FUTURE OF LARGE LANGUAGE MODELS}
-	\begin{itemize}
-		\item ....Skynet????
-		\pause
-		\item ....fully automated luxury communism???
-		\pause 
-		\item ....larger context windows?
-		
-	\end{itemize}
-\end{frame}
 	
-	
-
 \begin{frame}
 	deep breath....
 	% This is the portion of the talk where I am very nervous. I'm in the beginning-to-mid stages of training a coding LLM (CodeLLaMa-7b-instruct) on a MARC dataset
@@ -327,6 +339,11 @@
 	\end{itemize}
 \end{frame}
 
+% Possible library directions:
+
+% Chatbot over reference data
+% FINNA / subject heading help
+% MARC record stuffing
 
 \begin{frame}
 	%this is always the last slide

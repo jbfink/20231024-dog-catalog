@@ -80,17 +80,15 @@
 		\item Pedagogical implications, including academic integrity
 		\pause
 		\item Ethics
+		\pause
+		\item Truth
+		\pause
+		\item Beauty
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	These are VERY IMPORTANT concepts.
-\end{frame}
-
-\begin{frame}{A note about techbros}
-% slide about bitcoin/NFT and commonalities between it and "AI" now
-% Crucial bit -- NFTs and Bitcoin are predicated upon *scarcity*, AI is not (not artificially, anyway)
-
 \end{frame}
 
 \begin{frame}
@@ -250,6 +248,8 @@
 		\pause
 		\item The Pile (825GiB), Github, ShareGPT, etc.
 		\pause
+		\item (cough) books3....
+		\pause
 		\item And other terms like RLHF (Reinforcement Learning from Human Feedback)
 		\pause
 		\item The larger the model, the more resources it takes to train or re-train.
@@ -288,21 +288,32 @@
 \end{frame}
 
 \begin{frame}{quantization of models}
-	% comparison of unquant and quant models here -- note size decreseases/system requirement decreases
-\end{frame}
-
-\begin{frame}{We Have No Moat}
-	In May 2023 a Google internal document was leaked to the public, titled "We Have No Moat, and Neither Does OpenAI". It's worth quoting some bits from it, because it's a doozy.
-\end{frame}
-
-\begin{frame}{We Have No Moat}
 	\begin{itemize}
-		\item "While our models still hold a slight edge in terms of quality, the gap is closing astonishingly quickly. Open-source models are faster, more customizable, more private, and pound-for-pound more capable. They are doing things with \$100 and 13B params that we struggle with at \$10M and 540B. And they are doing so in weeks, not months. This has profound implications for us."
+		\item llama.cpp runs on \textit{quantized} models, which is roughly a compression technique that drastically cuts down the size, and more crucially, the processing power needed to run a model.
 		\pause
-		\item "Indeed, in terms of engineer-hours, the pace of improvement from these models vastly outstrips what we can do with our largest variants, and the best are already largely indistinguishable from ChatGPT. Focusing on maintaining some of the largest models on the planet actually puts us at a disadvantage."
+		\item So, Mistral's LLM -- a popular open-source model -- is roughly 15GB unquantized and pretty much requires dedicated GPU to run well, whereas with the most \textit{extreme} quantization, it can get to about 3GB and can run on a reasonably modern smartphone.
+		\pause
+		\item Quantization is like \textit{lossy compression} -- smaller the model, the more tradeoffs, although with less-extreme quantization the differences are fairly negligible.
 	\end{itemize}
+		
 \end{frame}
 
+
+
+
+
+\begin{frame}{teaching an old dog new... dog stuff}
+There are roughly \textit{three} ways to get new information into a model.
+\begin{itemize}
+	\pause
+	\item Train from scratch
+	\pause
+	\item Consulting external sources (Retrieval Augmented Generation et al)
+	\pause
+	\item Tuning
+\end{itemize}
+\end{frame}
+	
 	
 \begin{frame}
 	deep breath....
@@ -338,6 +349,8 @@
 		
 	\end{itemize}
 \end{frame}
+
+
 
 % Possible library directions:
 

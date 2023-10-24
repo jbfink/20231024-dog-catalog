@@ -181,6 +181,10 @@
 
 % Weather prediction is a lot like language prediction in LLMs. Before the advent of programmable computers, it involved looking at the sky a lot and looking at barometers a lot -- in the 1950s, the early computer ENIAC ran some of the first weather models. Nowadays, we have weather models that are extremely sophisticated and take a lot of computing power to run and can predict the weather many days out. They predict the weather by looking at *current conditions* and extrapolating what *usually happens* from those current predictions, and they're really pretty good at it because there's a lot of data about. This is *eerily similar* to how LLMs/ChatGPT works -- it's not "reasoning" per se, but *predicting* what comes next based on context and what has come previous, and since they have vast, vast amounts of example data -- like the weather models! -- they are pretty good at it. Good enough to fool us, anyway.
 
+\begin{frame}
+	Right now, in late 2023, LLMs are sort of midway between weather modeling and...
+\end{frame}
+
 \begin{frame}[plain]
 	\makebox[\linewidth]{\includegraphics[width=\paperwidth,height=\paperheight]{eat-up-martha}}
 \end{frame}
@@ -271,7 +275,7 @@
 		\pause 
 		\item But \textit{definitely} correlates to resources needed to run the model.
 		\pause
-		\item Which is why, say, GPT-4 requires this....
+		\item Which is why, say, GPT-4 (probably 1.7 trillion) requires this....
 	\end{itemize}
 \end{frame}
 
@@ -299,6 +303,8 @@
 		\pause
 		\item So, Mistral's LLM -- a popular open-source model -- is roughly 15GB unquantized and pretty much requires dedicated GPU to run well, whereas with the most \textit{extreme} quantization, it can get to about 3GB and can run on a reasonably modern smartphone.
 		\pause
+		\item As running an LLM generally requires fitting the entire model in RAM or VRAM, this can be helpful.
+		\pause 
 		\item Quantization is like \textit{lossy compression} -- smaller the model, the more tradeoffs, although with less-extreme quantization the differences are fairly negligible.
 	\end{itemize}
 	
@@ -325,7 +331,7 @@ There are roughly \textit{three} ways to get new information into a model.
 	\pause
 	\item Consulting external sources (Retrieval Augmented Generation et al)
 	\pause
-	\item Tuning
+	\item Tuning on top of an existing model
 \end{itemize}
 \end{frame}
 	
@@ -372,11 +378,11 @@ There are roughly \textit{three} ways to get new information into a model.
 
 \begin{frame}{Possible applications for libraries}
 	\begin{itemize}
-		\item Chatbot trained on site-specific reference transactions.
+		\item Chatbot trained on site-specific reference transactions
 		\pause
 		\item Pro: A possibly genuinely useful service, especially during off-hours
 		\pause
-		\item Con: Privacy, hallucinations.
+		\item Con: Privacy, hallucinations
 	\end{itemize}
 \end{frame}
 
@@ -384,13 +390,13 @@ There are roughly \textit{three} ways to get new information into a model.
 	\begin{itemize}
 		\item Programming-specific model tuned with examples of MARC records.
 		\pause
-		\item Pro: Public data.
+		\item Pro: Public data
 		\pause
-		\item Con: Complex.
+		\item Con: Complex
 		\pause
-		\item Con: Maybe only useful for edge cases.
+		\item Con: Maybe only useful for edge cases
 		\pause
-		\item Con: Will make catalogers mad if it works.
+		\item Con: Will make catalogers mad if it works
 	\end{itemize}
 \end{frame}
 
@@ -398,7 +404,7 @@ There are roughly \textit{three} ways to get new information into a model.
 	\begin{itemize}
 		\item Multimodal model (trained on images + text) for image description of unique collections or OCR
 		\pause
-		\item Pro: Public data, genuinely useful.
+		\item Pro: Public data, genuinely useful
 		\pause
 		\item Con: Would still need editing/vetting due to (sometimes hilarious) inaccuracies
 		
